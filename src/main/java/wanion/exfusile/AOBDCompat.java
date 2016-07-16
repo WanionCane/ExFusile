@@ -21,7 +21,6 @@ import java.util.List;
 final class AOBDCompat extends ExNihiloCompat
 {
     @Override
-    @Nonnull
     protected void searchForThingsThatCanMelt()
     {
         for (ItemInfo itemInfoKey : sieveRegistry.keySet()) {
