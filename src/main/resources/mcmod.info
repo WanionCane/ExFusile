@@ -1,0 +1,15 @@
+[
+{
+  "modid": "ExFusile",
+  "name": "Ex Fusile",
+  "description": "bringing back smashed/crushed/powdered ores to smeltery.",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "http://minecraft.curseforge.com/projects/ex-fusile",
+  "updateUrl": "",
+  "authorList": ["WanionCane"],
+  "logoFile": "ExFusileLogo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
