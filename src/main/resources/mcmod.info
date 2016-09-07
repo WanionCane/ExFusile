@@ -3,7 +3,7 @@
   "modid": "ExFusile",
   "name": "Ex Fusile",
   "description": "bringing back smashed/crushed/powdered ores to smeltery.",
-  "version": "1.0",
+  "version": "1.1",
   "mcversion": "${mcversion}",
   "url": "http://minecraft.curseforge.com/projects/ex-fusile",
   "updateUrl": "",

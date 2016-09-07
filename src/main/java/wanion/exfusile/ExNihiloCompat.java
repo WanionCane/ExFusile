@@ -38,14 +38,26 @@ class ExNihiloCompat
         final String yellorium = "yellorium";
         if (canMelt.containsKey(yellorium))
             canMelt.get(yellorium).setFluid("aobd" + yellorium);
-        registerInSmeltery();
+        final String fzDarkIron = "fzDarkIron";
+        if (canMelt.containsKey(fzDarkIron))
+            canMelt.get(fzDarkIron).setFluid("fzdarkiron");
+        final String deepIron = "deepIron";
+        if (canMelt.containsKey(deepIron))
+            canMelt.get(deepIron).setFluid("deep.iron.molten");
+        final String astralSilver = "astralSilver";
+        if (canMelt.containsKey(astralSilver))
+            canMelt.get(astralSilver).setFluid("astral.silver.molten");
+        final String shadowIron = "shadowIron";
+        if (canMelt.containsKey(shadowIron))
+            canMelt.get(shadowIron).setFluid("shadow.iron.molten");
+        canMelt.values().stream().filter(SmelteryRecipeWrapper::valid).forEach(fluidWrapper -> fluidWrapper.meltingList.forEach(thisWillMelt -> Smeltery.addMelting(thisWillMelt, fluidWrapper.block, fluidWrapper.blockMeta, fluidWrapper.pointOfFusion, fluidWrapper.getFluidStack())));
     }
 
     protected void searchForThingsThatCanMelt()
     {
-        for (ItemInfo itemInfoKey : sieveRegistry.keySet()) {
+        for (final ItemInfo itemInfoKey : sieveRegistry.keySet()) {
             final List<SiftingResult> results = sieveRegistry.get(itemInfoKey);
-            for (SiftingResult result : results) {
+            for (final SiftingResult result : results) {
                 if (!(result.item instanceof ItemOre))
                     continue;
                 String materialName = WordUtils.uncapitalize(pattern.matcher(result.item.getUnlocalizedName()).replaceAll(""));
@@ -57,13 +69,5 @@ class ExNihiloCompat
                 canMelt.get(materialName).meltingList.add(new ItemStack(result.item, 1, result.meta));
             }
         }
-    }
-
-    private void registerInSmeltery()
-    {
-        canMelt.values().stream().filter(SmelteryRecipeWrapper::valid).forEach(fluidWrapper -> {
-            for (final ItemStack thisWillMelt : fluidWrapper.meltingList)
-                Smeltery.addMelting(thisWillMelt, fluidWrapper.block, fluidWrapper.blockMeta, fluidWrapper.pointOfFusion, fluidWrapper.getFluidStack());
-        });
     }
 }

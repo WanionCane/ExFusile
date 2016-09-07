@@ -12,7 +12,7 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
 
-@Mod(modid = "ExFusile", name = "Ex Fusile", version = "1.0", acceptedMinecraftVersions = "[1.7.10]", dependencies = "required-after:exnihilo;required-after:TConstruct")
+@Mod(modid = "ExFusile", name = "Ex Fusile", version = "1.1", dependencies = "required-after:exnihilo;required-after:TConstruct")
 public class ExFusile
 {
     @Mod.EventHandler
