@@ -12,7 +12,7 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
 
-@Mod(modid = "ExFusile", name = "Ex Fusile", version = "1.2b", dependencies = "required-after:exnihilo;required-after:TConstruct")
+@Mod(modid = "ExFusile", name = "Ex Fusile", version = "1.3", dependencies = "required-after:exnihilo;required-after:TConstruct")
 public class ExFusile
 {
     @Mod.EventHandler
