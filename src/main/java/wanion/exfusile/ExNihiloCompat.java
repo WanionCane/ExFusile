@@ -50,7 +50,7 @@ class ExNihiloCompat
         final String shadowIron = "shadowIron";
         if (canMelt.containsKey(shadowIron))
             canMelt.get(shadowIron).setFluid("shadow.iron.molten");
-        canMelt.values().stream().filter(SmelteryRecipeWrapper::valid).forEach(fluidWrapper -> fluidWrapper.meltingList.forEach(thisWillMelt -> Smeltery.addMelting(thisWillMelt, fluidWrapper.block, fluidWrapper.blockMeta, fluidWrapper.pointOfFusion, fluidWrapper.getFluidStack())));
+        canMelt.values().stream().filter(SmelteryRecipeWrapper::valid).forEach(fluidWrapper -> fluidWrapper.meltingList.forEach(thisWillMelt -> Smeltery.addMelting(thisWillMelt, fluidWrapper.getBlock(), fluidWrapper.getBlockMeta(), fluidWrapper.getPointOfFusion(), fluidWrapper.getFluidStack())));
     }
 
     protected void searchForThingsThatCanMelt()
