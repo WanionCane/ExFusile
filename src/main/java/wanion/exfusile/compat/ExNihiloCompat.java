@@ -1,4 +1,5 @@
 package wanion.exfusile.compat;
+
 /*
  * Created by WanionCane(https://github.com/WanionCane).
  *
