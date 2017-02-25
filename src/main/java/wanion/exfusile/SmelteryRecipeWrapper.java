@@ -24,9 +24,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-class SmelteryRecipeWrapper
+public class SmelteryRecipeWrapper
 {
-    final List<ItemStack> meltingList = new ArrayList<>();
+    public final List<ItemStack> meltingList = new ArrayList<>();
     private final String name;
     private final int amount;
     private int pointOfFusion;
